@@ -1,15 +1,15 @@
 {
-  "name": "@lukemorales/query-key-factory",
+  "name": "@nerdino/query-key-factory",
   "version": "1.2.0",
   "author": "Luke Morales <lukemorales@live.com>",
   "description": "A library for creating standardized query keys, useful for cache management in @tanstack/query",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lukemorales/query-key-factory.git"
+    "url": "https://github.com/Nerdino/query-key-factory.git"
   },
   "bugs": {
-    "url": "https://github.com/lukemorales/query-key-factory/issues"
+    "url": "https://github.com/Nerdino/query-key-factory/issues"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -32,7 +32,7 @@
     "test": "vitest --passWithNoTests",
     "test:ci": "pnpm run test:coverage --run",
     "test:coverage": "pnpm run test --coverage",
-    "prepare": "is-ci || husky install",
+    "prepare": "npm run build",
     "prerelease": "run-p build test:ci",
     "release": "changeset publish"
   },
