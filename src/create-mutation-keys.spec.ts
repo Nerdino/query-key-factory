@@ -1,4 +1,4 @@
-import { MutateFunction } from '@tanstack/query-core';
+import { MutationFunction } from '@tanstack/query-core';
 
 import { createMutationKeys } from './create-mutation-keys';
 import { inferQueryKeys } from './types';
@@ -182,7 +182,7 @@ describe('createMutationKeys', () => {
 
               expect(sut.prop).toHaveType<{
                 mutationKey: readonly ['test', 'prop'];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               }>();
             });
           });
@@ -207,7 +207,7 @@ describe('createMutationKeys', () => {
               expect(sut.prop).toHaveType<{
                 _def: readonly ['test', 'prop'];
                 mutationKey: readonly ['test', 'prop', string];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               }>();
             });
           });
@@ -323,7 +323,7 @@ describe('createMutationKeys', () => {
                   };
                 };
                 mutationKey: readonly ['test', 'prop'];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               }>();
             });
           });
@@ -361,7 +361,7 @@ describe('createMutationKeys', () => {
                   };
                 };
                 mutationKey: readonly ['test', 'prop', string];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               }>();
             });
           });
@@ -481,7 +481,7 @@ describe('createMutationKeys', () => {
             expect(sut.prop).toHaveType<
               { _def: readonly ['test', 'prop'] } & ((value: string) => {
                 mutationKey: readonly ['test', 'prop', string];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               })
             >();
 
@@ -575,7 +575,7 @@ describe('createMutationKeys', () => {
                   };
                 };
                 mutationKey: readonly ['test', 'prop', string];
-                mutationFn: MutateFunction<boolean, unknown, undefined, unknown>;
+                mutationFn: MutationFunction<boolean, any>;
               })
             >();
 
